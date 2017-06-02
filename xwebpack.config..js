@@ -12,13 +12,14 @@ module.exports = {
   plugins:[
     new webpack.HotModuleReplacementPlugin()
   ],
-  module: {
+   module: {
     loaders: [{
-      exclude: /node_modules/,
-      loader: 'babel',
+     exclude: /node_modules/,
+      test: /\.js$/,
+      loaders: ['react-hot', 'babel'],   
       query: {
         presets: ['react', 'es2015', 'stage-1']
-      }
+      }   
     }]
   },
   resolve: {
