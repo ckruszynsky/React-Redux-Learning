@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import SearchBar from '../containers/search-bar';
 
 class App extends Component {
   constructor(props) {
@@ -10,6 +10,7 @@ class App extends Component {
     return (
       <div>
        <h1>Weather App </h1>
+       <SearchBar />
       </div>
     );
   }
