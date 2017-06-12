@@ -12,15 +12,13 @@ class SearchBar extends Component {
     this.onFormSubmit = this.onFormSubmit.bind(this);
   }
 
-  onInputChange(event) {
-    console.log(event.target.value);
+  onInputChange(event) {    
     this.setState({ term: event.target.value });
   }
 
   onFormSubmit(event){
     event.preventDefault();
-    this.props.fetchWeather(this.state.term);
-    
+    this.props.fetchWeather(this.state.term)    
     this.setState({ term: ''}); //clear the input field
   }
   
