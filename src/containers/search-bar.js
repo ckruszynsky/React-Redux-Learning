@@ -17,7 +17,7 @@ class SearchBar extends Component {
   }
 
   onFormSubmit(event){
-    event.preventDefault();
+    event.preventDefault();    
     this.props.fetchWeather(this.state.term)    
     this.setState({ term: ''}); //clear the input field
   }
@@ -42,9 +42,9 @@ class SearchBar extends Component {
   }
 }
 
-function mapDispatchToProps(dispatch){
-  return bindActionCreators({ fetchWeather }, dispatch);
-}
+// function mapDispatchToProps(dispatch){
+//     return bindActionCreators({ fetchWeather }, dispatch);
+// }
 
 
-export default connect(null, mapDispatchToProps)(SearchBar);
+export default connect(null, { fetchWeather })(SearchBar);
